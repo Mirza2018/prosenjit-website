@@ -1,5 +1,4 @@
 import profilePic from "./profilePic.jpg";
-
-export const AllImage = {
+export const BasicImage = {
   profilePic,
-};
+};   

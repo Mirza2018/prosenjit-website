@@ -4,7 +4,7 @@ import { Button } from "antd"
 import { FiDownload, FiArrowRight } from "react-icons/fi"
 import Image from "next/image"
 import Link from "next/link"
-import { AllImage } from "./../public/Allimage";
+import { BasicImage } from "./../public/BasicImage";
 
 export default function Home() {
   const fadeIn = {
@@ -61,7 +61,7 @@ export default function Home() {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-600">
             <Image
-              src={AllImage.profilePic}
+              src={BasicImage.profilePic}
               alt="Prosenjit Banik"
               fill
               className="object-cover"
