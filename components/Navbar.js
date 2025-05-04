@@ -25,9 +25,9 @@ export default function Navbar() {
     setIsOpen(false)
   }
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-  }
+  // const toggleTheme = () => {
+  //   setTheme(theme === "dark" ? "light" : "dark")
+  // }
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -64,7 +64,7 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {mounted && (
+          {/* {mounted && (
             <button
               onClick={toggleTheme}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-input bg-background text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -72,12 +72,12 @@ export default function Navbar() {
             >
               {theme === "dark" ? <FiSun className="h-4 w-4" /> : <FiMoon className="h-4 w-4" />}
             </button>
-          )}
+          )} */}
         </nav>
 
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center gap-2 md:hidden">
-          {mounted && (
+          {/* {mounted && (
             <button
               onClick={toggleTheme}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-input bg-background text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -85,7 +85,7 @@ export default function Navbar() {
             >
               {theme === "dark" ? <FiSun className="h-4 w-4" /> : <FiMoon className="h-4 w-4" />}
             </button>
-          )}
+          )} */}
 
           <button
             onClick={toggleMenu}

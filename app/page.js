@@ -4,6 +4,7 @@ import { Button } from "antd"
 import { FiDownload, FiArrowRight } from "react-icons/fi"
 import Image from "next/image"
 import Link from "next/link"
+import { AllImage } from "./../public/Allimage";
 
 export default function Home() {
   const fadeIn = {
@@ -29,8 +30,9 @@ export default function Home() {
             UI/UX Designer at SparkTech Agency
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-            I create intuitive, user-centered designs that balance aesthetics and functionality, focusing on building
-            seamless digital experiences.
+            I create intuitive, user-centered designs that balance aesthetics
+            and functionality, focusing on building seamless digital
+            experiences.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button
@@ -59,7 +61,7 @@ export default function Home() {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-600">
             <Image
-              src="/placeholder.svg?height=320&width=320"
+              src={AllImage.profilePic}
               alt="Prosenjit Banik"
               fill
               className="object-cover"
@@ -83,7 +85,10 @@ export default function Home() {
           },
         }}
       >
-        <motion.h2 className="text-3xl font-bold mb-8 gradient-text inline-block" variants={fadeIn}>
+        <motion.h2
+          className="text-3xl font-bold mb-8 gradient-text inline-block"
+          variants={fadeIn}
+        >
           About Me
         </motion.h2>
 
@@ -91,24 +96,27 @@ export default function Home() {
           <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md card-hover">
             <h3 className="text-xl font-semibold mb-4">Background</h3>
             <p>
-              I'm currently working as a UI/UX Designer at SparkTech Agency. With a passion for creating intuitive,
-              user-centered designs, I focus on building seamless digital experiences.
+              I'm currently working as a UI/UX Designer at SparkTech Agency.
+              With a passion for creating intuitive, user-centered designs, I
+              focus on building seamless digital experiences.
             </p>
           </div>
 
           <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md card-hover">
             <h3 className="text-xl font-semibold mb-4">Hobbies</h3>
             <p>
-              Design is more than just a profession for me—it's my passion and my hobby. In my free time, I love
-              exploring new design trends, sketching UI concepts, and experimenting with color schemes.
+              Design is more than just a profession for me—it's my passion and
+              my hobby. In my free time, I love exploring new design trends,
+              sketching UI concepts, and experimenting with color schemes.
             </p>
           </div>
 
           <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md card-hover">
             <h3 className="text-xl font-semibold mb-4">Expertise</h3>
             <p>
-              I'm proficient with tools like Figma and Framer, and I'm constantly pushing myself to learn new tools and
-              techniques to stay ahead in this dynamic field.
+              I'm proficient with tools like Figma and Framer, and I'm
+              constantly pushing myself to learn new tools and techniques to
+              stay ahead in this dynamic field.
             </p>
           </div>
         </motion.div>
@@ -122,16 +130,23 @@ export default function Home() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-3xl font-bold mb-4">Interested in working together?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Interested in working together?
+        </h2>
         <p className="text-lg mb-8 max-w-2xl mx-auto">
-          I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+          I'm always open to discussing new projects, creative ideas or
+          opportunities to be part of your visions.
         </p>
         <Link href="/contact">
-          <Button type="primary" size="large" className="bg-indigo-600 hover:bg-indigo-700">
+          <Button
+            type="primary"
+            size="large"
+            className="bg-indigo-600 hover:bg-indigo-700"
+          >
             Get In Touch
           </Button>
         </Link>
       </motion.section>
     </div>
-  )
+  );
 }

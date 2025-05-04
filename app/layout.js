@@ -5,6 +5,7 @@ import Footer from "@/components/Footer"
 import { AntdRegistry } from "@ant-design/nextjs-registry"
 import { ThemeProvider } from "@/components/theme-provider"
 
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
