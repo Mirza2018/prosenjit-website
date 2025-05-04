@@ -40,7 +40,7 @@ export default function Home() {
               size="large"
               className="bg-indigo-600 hover:bg-indigo-700"
               icon={<FiDownload />}
-              href="/prosenjit-cv.pdf"
+              href="/Prosenjit-Banik-Resume.pdf"
               download
             >
               Download CV
