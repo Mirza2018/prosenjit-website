@@ -149,7 +149,7 @@ export default function Contact() {
           >
             <Form.Item
               name="name"
-              label={<p className="text-white">Your Name</p>}
+              label={<p className="text-indigo-500">Your Name</p>}
               rules={[{ required: true, message: "Please enter your name" }]}
             >
               <Input size="large" placeholder="John Doe" />
@@ -157,7 +157,7 @@ export default function Contact() {
 
             <Form.Item
               name="email"
-              label={<p className="text-white">Your Email</p>}
+              label={<p className="text-indigo-500">Your Email</p>}
               rules={[
                 { required: true, message: "Please enter your email" },
                 { type: "email", message: "Please enter a valid email" },
@@ -168,7 +168,7 @@ export default function Contact() {
 
             <Form.Item
               name="subject"
-              label={<p className="text-white">Subject</p>}
+              label={<p className="text-indigo-500">Subject</p>}
               rules={[{ required: true, message: "Please enter a subject" }]}
             >
               <Input size="large" placeholder="Project Inquiry" />
@@ -176,7 +176,7 @@ export default function Contact() {
 
             <Form.Item
               name="message"
-              label={<p className="text-white">Message</p>}
+              label={<p className="text-indigo-500">Message</p>}
               rules={[{ required: true, message: "Please enter your message" }]}
             >
               <Input.TextArea
