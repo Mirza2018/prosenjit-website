@@ -187,40 +187,7 @@ export default function Thoughts() {
         </Card>
       </motion.section>
 
-      {/* Blog Posts Section */}
-      <motion.section
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        variants={{
-          initial: { opacity: 0 },
-          animate: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 },
-          },
-        }}
-      >
-        <motion.h2 className="text-3xl font-bold mb-8" variants={fadeIn}>
-          Recent Articles
-        </motion.h2>
-
-        <div className="space-y-6">
-          {blogPosts.map((post) => (
-            <motion.div
-              key={post.id}
-              variants={fadeIn}
-              className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md card-hover"
-            >
-              <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-              <p className="text-gray-500 text-sm mb-4">{post.date}</p>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
-              <a href="#" className="text-indigo-600 font-medium hover:underline">
-                Read more
-              </a>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+  
     </div>
   )
 }
