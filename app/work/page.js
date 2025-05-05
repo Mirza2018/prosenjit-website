@@ -1,8 +1,9 @@
-"use client"
-import { motion } from "framer-motion"
-import { Card, Tag } from "antd"
-import { FiExternalLink } from "react-icons/fi"
-import Image from "next/image"
+"use client";
+import { motion } from "framer-motion";
+import { Card, Tag } from "antd";
+import { FiExternalLink } from "react-icons/fi";
+import Image from "next/image";
+import { BasicImage } from "../../public/BasicImage";
 
 export default function Work() {
   const projects = [
@@ -10,63 +11,48 @@ export default function Work() {
       id: 1,
       title: "E-commerce App Redesign",
       description:
-        "Complete redesign of a mobile e-commerce application focusing on improving user experience and conversion rates.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["UI/UX", "Mobile", "E-commerce"],
-      link: "#",
+        "Built a platform for dog lovers to explore pet-friendly places and connect with the community.",
+      image: BasicImage.woofspot,
+      tags: ["UI/UX", "Website", "Dating", "E-commerce"],
+      link: "https://woofspot.net/",
     },
     {
       id: 2,
       title: "Financial Dashboard",
       description:
-        "Designed an intuitive dashboard for a financial services company that simplifies complex data visualization.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Dashboard", "Data Visualization", "Fintech"],
-      link: "#",
+        "Designed a solution for brands to create camera-free content using custom avatars.",
+      image: BasicImage.logicgenx,
+      tags: ["UI/UX", "Website", "Avatars"],
+      link: "https://www.blutomatic.com/",
     },
-    {
-      id: 3,
-      title: "Travel Booking Platform",
-      description:
-        "Created a seamless booking experience for a travel platform, focusing on simplifying the reservation process.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Web Design", "Travel", "Booking"],
-      link: "#",
-    },
-    {
-      id: 4,
-      title: "Health & Fitness App",
-      description:
-        "Designed a user-friendly fitness tracking application with personalized workout plans and progress monitoring.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Mobile", "Health", "Fitness"],
-      link: "#",
-    },
-  ]
+  ];
 
   const experiences = [
     {
       id: 1,
       company: "SparkTech Agency",
-      position: "Senior UI/UX Designer",
-      period: "2021 - Present",
-      description: "Leading design projects for various clients, creating wireframes, prototypes, and final designs.",
+      position: "Jr.UI/UX Designer",
+      period: "October 2024- Present",
+      description:
+        "Focused on designing user interfaces for both mobile applications and responsive web platforms.",
     },
     {
       id: 2,
-      company: "DigitalCraft Studios",
-      position: "UI Designer",
-      period: "2018 - 2021",
-      description: "Collaborated with development teams to create visually appealing and functional user interfaces.",
+      company: "Softriple",
+      position: "Jr UI/UX Designer",
+      period: "July 2024 - October 2024",
+      description:
+        "Worked closely with developers to ensure seamless integration of designs into functional e commerce solutions.",
     },
     {
       id: 3,
-      company: "WebVision",
-      position: "Junior Designer",
-      period: "2016 - 2018",
-      description: "Assisted senior designers in creating visual elements and learning the fundamentals of UX design.",
+      company: "Esscre",
+      position: "UI/UX Design Intern",
+      period: "April 2024 - July 2024",
+      description:
+        "Conducting user research, surveys, and usability testing, Designing the visuals and interactions for cross platforms",
     },
-  ]
+  ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -76,12 +62,12 @@ export default function Work() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
-  }
+  };
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -105,7 +91,12 @@ export default function Work() {
           Featured Projects
         </motion.h2>
 
-        <motion.div className="grid md:grid-cols-2 gap-8" variants={container} initial="hidden" animate="show">
+        <motion.div
+          className="grid md:grid-cols-2 gap-8"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           {projects.map((project) => (
             <motion.div key={project.id} variants={item}>
               <Card
@@ -117,17 +108,24 @@ export default function Work() {
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                   </div>
                 }
                 actions={[
-                  <a href={project.link} key="link" className="flex items-center justify-center gap-2">
+                  <a
+                    href={project.link}
+                    key="link"
+                    className="flex items-center justify-center gap-2"
+                  >
                     View Project <FiExternalLink />
                   </a>,
                 ]}
               >
-                <Card.Meta title={project.title} description={project.description} />
+                <Card.Meta
+                  title={project.title}
+                  description={project.description}
+                />
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tags.map((tag, index) => (
                     <Tag key={index} color="blue">
@@ -160,20 +158,28 @@ export default function Work() {
           variants={container}
         >
           {experiences.map((exp) => (
-            <motion.div key={exp.id} variants={item} className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md">
+            <motion.div
+              key={exp.id}
+              variants={item}
+              className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md"
+            >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <h3 className="text-xl font-bold">{exp.position}</h3>
                 <div className="flex items-center gap-2">
-                  <span className="text-indigo-600 font-medium">{exp.company}</span>
+                  <span className="text-indigo-600 font-medium">
+                    {exp.company}
+                  </span>
                   <span className="text-gray-500">|</span>
                   <span className="text-gray-500">{exp.period}</span>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-300">{exp.description}</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                {exp.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>
       </section>
     </div>
-  )
+  );
 }

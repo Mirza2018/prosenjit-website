@@ -6,14 +6,15 @@ import { ImBehance2 } from "react-icons/im";
 export default function Footer() {
   return (
     <footer className="w-full border-t py-6 md:py-8">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8">
-          <div className="text-center md:text-left">
+      <div className="container mx-auto px-4 md:px-0">
+        <div className="flex flex-col md:grid md:grid-cols-3 justify-between items-center gap-4 md:gap-8">
+
+          <div className="text-center ">
             <div className="font-bold text-lg">Prosenjit Banik</div>
             <p className="text-sm text-muted-foreground mt-1">UI/UX Designer</p>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex  gap-4">
             <Link
               href="mailto:pbanik856@gmail.com"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -47,12 +48,13 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="text-center md:text-right text-sm text-muted-foreground">
+          <div className="text-center  text-sm text-muted-foreground">
             <p>
               &copy; {new Date().getFullYear()} Prosenjit Banik. All rights
               reserved.
             </p>
           </div>
+
         </div>
       </div>
     </footer>
