@@ -115,29 +115,41 @@ export default function Thoughts() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <motion.h1
+      {/* <motion.h1
         className="text-4xl font-bold mb-12 gradient-text inline-block"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         Thoughts & Insights
-      </motion.h1>
+      </motion.h1> */}
 
       {/* Podcast Section */}
-      <motion.section className="mb-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+      <motion.section
+        className="mb-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
         <h2 className="text-3xl font-bold mb-8">My Podcast</h2>
 
         <Card className="mb-8">
-          <h3 className="text-2xl font-bold mb-2">Changes in Social Values in Bangladesh</h3>
+          <h3 className="text-2xl font-bold mb-2">
+            Changes in Social Values in Bangladesh
+          </h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            In this episode, I share my views on the significant changes in social values that Bangladesh has
-            experienced over the last decade, exploring both the positive developments and challenges.
+            In this episode, I share my views on the significant changes in
+            social values that Bangladesh has experienced over the last decade,
+            exploring both the positive developments and challenges.
           </p>
 
           {/* Audio Player */}
           <div className="audio-player bg-slate-100 dark:bg-slate-800 p-4 rounded-lg">
-            <audio ref={audioRef} src="/sample-podcast.mp3" preload="metadata"></audio>
+            <audio
+              ref={audioRef}
+              src="/videoplayback.m4a"
+              preload="metadata"
+            ></audio>
 
             {/* Progress Bar */}
             <div
@@ -169,7 +181,10 @@ export default function Thoughts() {
               </div>
 
               <div className="flex items-center gap-2">
-                <button onClick={toggleMute} className="text-gray-600 dark:text-gray-300">
+                <button
+                  onClick={toggleMute}
+                  className="text-gray-600 dark:text-gray-300"
+                >
                   {isMuted ? <FiVolumeX /> : <FiVolume2 />}
                 </button>
 
@@ -186,8 +201,6 @@ export default function Thoughts() {
           </div>
         </Card>
       </motion.section>
-
-  
     </div>
-  )
+  );
 }

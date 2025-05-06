@@ -9,19 +9,19 @@ export default function Work() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce App Redesign",
+      title: "Dog lovers website",
       description:
         "Built a platform for dog lovers to explore pet-friendly places and connect with the community.",
       image: BasicImage.woofspot,
-      tags: ["UI/UX", "Website", "Dating", "E-commerce"],
+      tags: ["UI/UX", "Website", "E-commerce"],
       link: "https://woofspot.net/",
     },
     {
       id: 2,
-      title: "Financial Dashboard",
+      title: "Digital Avater Website",
       description:
         "Designed a solution for brands to create camera-free content using custom avatars.",
-      image: BasicImage.logicgenx,
+      image: BasicImage.blutomatic,
       tags: ["UI/UX", "Website", "Avatars"],
       link: "https://www.blutomatic.com/",
     },
