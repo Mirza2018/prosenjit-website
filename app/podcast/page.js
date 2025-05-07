@@ -138,18 +138,13 @@ export default function Thoughts() {
             Changes in Social Values in Bangladesh
           </h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            In this episode, I share my views on the significant changes in
-            social values that Bangladesh has experienced over the last decade,
-            exploring both the positive developments and challenges.
+            My Views on Changes in Social Values in Bangladesh in the Last
+            Decade
           </p>
 
           {/* Audio Player */}
           <div className="audio-player bg-slate-100 dark:bg-slate-800 p-4 rounded-lg">
-            <audio
-              ref={audioRef}
-              src="/videoplayback.m4a"
-              preload="metadata"
-            ></audio>
+            <audio ref={audioRef} src="/pod2.wav" preload="metadata"></audio>
 
             {/* Progress Bar */}
             <div
