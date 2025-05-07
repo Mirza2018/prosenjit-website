@@ -14,7 +14,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground mt-1">UI/UX Designer</p>
           </div>
 
-          <div className="flex  gap-4">
+          <div className="flex  gap-4 xl:ps-36 lg:ps-24 md:ps-12">
             <Link
               href="mailto:pbanik856@gmail.com"
               className="text-muted-foreground hover:text-foreground transition-colors"

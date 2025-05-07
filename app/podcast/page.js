@@ -137,7 +137,7 @@ export default function Thoughts() {
           <h3 className="text-2xl font-bold mb-2">
             Changes in Social Values in Bangladesh
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
+          <p className="text-indigo-500  mb-6">
             My Views on Changes in Social Values in Bangladesh in the Last
             Decade
           </p>
