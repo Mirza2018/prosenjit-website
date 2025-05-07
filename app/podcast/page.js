@@ -144,7 +144,7 @@ export default function Thoughts() {
 
           {/* Audio Player */}
           <div className="audio-player bg-slate-100 dark:bg-slate-800 p-4 rounded-lg">
-            <audio ref={audioRef} src="/pod2.wav" preload="metadata"></audio>
+            <audio ref={audioRef} src="/pod1.wav" preload="metadata"></audio>
 
             {/* Progress Bar */}
             <div
